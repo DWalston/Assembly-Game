@@ -17,7 +17,8 @@ playerFinal WORD 0
 dealerLow WORD 0
 dealerHigh WORD 0
 dealerHand WORD 2 DUP(?)
-prompt BYTE "Your next move? -      ",0
+prompt BYTE  "Your next move? -      ",0
+prompt2 BYTE "Play again? (Y/N) -    ",0
 clear BYTE "                        ",0
 input BYTE 5 DUP(?)
 
@@ -32,6 +33,13 @@ main PROC PUBLIC
   add deckSize,LENGTHOF card2
   dec deckSize
   call Randomize
+
+start:
+  mov ax,0 ; reset scores
+  mov playerLow,ax
+  mov playerHigh,ax
+  mov dealerLow,0
+  mov dealerHigh,0
 
   mov eax,(lightGray*16)+black
   call SetTextColor
@@ -188,6 +196,26 @@ win:
   
 ; End of game
 quit:
+  mov eax,(blue*16)+white
+  call SetTextColor
+  mov dh, 20
+  mov dl,0
+  call Gotoxy
+  mov edx, OFFSET prompt2
+  call WriteString
+  mov dh,20
+  mov dl,20
+  call Gotoxy
+  mov edx, OFFSET input
+  mov ecx, 5
+  call ReadString
+
+  mov al, input[0]
+  cmp al,"y"
+  je start
+  cmp al,"Y"
+  je start
+
   mov eax,(lightGray*16)+black
   call SetTextColor
   mov dh, 20

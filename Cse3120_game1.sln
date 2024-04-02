@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cse3120_game1", "Cse3120_game1.vcxproj", "{A4F94B97-DBF1-4583-8056-7F146A125206}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4F94B97-DBF1-4583-8056-7F146A125206}.Debug|x86.ActiveCfg = Debug|Win32
+		{A4F94B97-DBF1-4583-8056-7F146A125206}.Debug|x86.Build.0 = Debug|Win32
+		{A4F94B97-DBF1-4583-8056-7F146A125206}.Release|x86.ActiveCfg = Release|Win32
+		{A4F94B97-DBF1-4583-8056-7F146A125206}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46E069DC-B013-4FCE-BBC4-A5F74056F213}
+	EndGlobalSection
+EndGlobal
